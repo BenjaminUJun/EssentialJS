@@ -1,4 +1,4 @@
-# Daily-JS
+# EssentialJS
 Daily javascript excercises and algorithm solutions for practice.
 
 ### Sources
