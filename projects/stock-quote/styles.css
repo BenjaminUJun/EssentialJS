@@ -1,0 +1,25 @@
+body {
+  font-family: lato;
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+input {
+  height: 40px;
+  border: 1px solid lightblue;
+  box-shadow: none;
+}
+input:focus {
+  border: none;
+  box-shadow: none;
+}
+#input {
+  width: 80%;
+}
+#submit {
+  background-color: lightblue;
+  padding: 10px;
+  margin: 0px;
+  height: 45px;
+  font-size: 1em;
+}
