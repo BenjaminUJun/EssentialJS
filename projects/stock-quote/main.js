@@ -3,14 +3,17 @@ $(function() {
     function init() {
         $('#input').keypress(function(e) {
             if (e.which == 13) {
-              var tmp = $('#input').val();
-              var re = new RegExp('/^[^a-zA-Z]+$/');
+              var inputValue = $('#input').val();
+              var re = new RegExp('/^[^a-zA-Z]/g');
 
-              if (tmp != '' && tmp === re) {
-                getData();
-                alert('success');
+              // Find a way to validate only letters. No numbers or special
+              // characters.
+              if (inputValue != '') {
+                getData(inputValue);
+
+
               } else {
-                alert('Please enter a quote. Only letters are accepted.');
+                alert('Please enter a quote');
               }
             }
         });
@@ -19,10 +22,8 @@ $(function() {
 
     init();
 
-    function getData() {
-        var query = $('#input').val();
-        console.log('success');
-        var url = 'https://www.quandl.com/api/v3/datasets/WIKI/' + query + '.json?auth_token=6znG6q5S2VrTnsPkDz3U';
+    function getData(inputValue) {
+        var url = 'https://www.quandl.com/api/v3/datasets/WIKI/' + inputValue + '.json?auth_token=6znG6q5S2VrTnsPkDz3U';
         $.get(url, function(data) {
             console.log(data);
             writeData(data);
