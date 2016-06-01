@@ -7,8 +7,8 @@ function sumAll(arr) {
   var high = Math.max.apply(null, arr);
   var low = Math.min.apply(null, arr);
   var tmp = 0;
-  for (var i = low; i < high; i++) {
-    tmp += low;
+  for (var i = low; i <= high; i++) {
+    tmp += i;
   }
   return tmp;
 
