@@ -57,12 +57,12 @@ function getUnits(country) {
 
 
 
-var map;
+
 
 function googleMap(latitude, longitude) {
     var lat = parseFloat(latitude);
     var lon = parseFloat(longitude);
-    map = new google.maps.Map(document.getElementById('googleMap'), {
+    var map = new google.maps.Map(document.getElementById('googleMap'), {
         center: {
             lat: lat,
             lng: lon
